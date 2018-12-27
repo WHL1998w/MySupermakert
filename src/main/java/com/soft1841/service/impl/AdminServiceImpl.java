@@ -20,7 +20,7 @@ public class AdminServiceImpl implements AdminService {
         }catch (NullPointerException e){
 
         }
-        //根据总好查找成功
+        //根据工号查找成功
         if (admin != null){
             //比较密码
             if (password.equals(admin.getPassword())){

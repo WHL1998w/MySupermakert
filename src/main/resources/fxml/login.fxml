@@ -7,54 +7,55 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-      <ImageView fitHeight="313.0" fitWidth="600.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/a.jpg" />
-         </image>
-      </ImageView>
-      <TextField layoutX="275.0" layoutY="124.0" />
-      <PasswordField layoutX="275.0" layoutY="204.0" />
-      <Label layoutX="202.0" layoutY="129.0" prefHeight="20.0" prefWidth="34.0" text="账号">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
-      <Label layoutX="202.0" layoutY="208.0" text="密码">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
-      <Button layoutX="275.0" layoutY="258.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" styleClass="blue-theme" stylesheets="@../../../../../super-market/src/main/resources/css/style.css" text="登录">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Button>
-      <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="276.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/b.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="275.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/suo.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="306.0" layoutY="126.0" prefHeight="30.0" prefWidth="170.0" text="请输入账号" />
-      <Label layoutX="306.0" layoutY="206.0" prefHeight="30.0" prefWidth="170.0" text="请输入密码" />
-      <Label layoutX="14.0" layoutY="2.0" prefHeight="45.0" prefWidth="190.0" stylesheets="@../../../../../super-market/src/main/resources/css/style.css" text="苍蓝星超市欢迎你">
-         <font>
-            <Font size="22.0" />
-         </font>
-      </Label>
-      <RadioButton layoutX="181.0" layoutY="85.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="111.0" text="收银员">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </RadioButton>
-      <RadioButton layoutX="342.0" layoutY="85.0" mnemonicParsing="false" text="管理员">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </RadioButton>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="360.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.controller.LoginController">
+   <children>
+         <ImageView fitHeight="313.0" fitWidth="600.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../img/a.jpg" />
+            </image>
+         </ImageView>
+         <TextField fx:id="accountField" alignment="TOP_CENTER" layoutX="275.0" layoutY="124.0" promptText="请输入账号" />
+         <PasswordField fx:id="passwordField" alignment="TOP_CENTER" layoutX="275.0" layoutY="204.0" promptText="请输入密码" />
+         <Label layoutX="202.0" layoutY="129.0" prefHeight="20.0" prefWidth="34.0" text="账号">
+            <font>
+               <Font size="17.0" />
+            </font>
+         </Label>
+         <Label layoutX="202.0" layoutY="208.0" text="密码">
+            <font>
+               <Font size="17.0" />
+            </font>
+         </Label>
+         <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="276.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../img/b.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="275.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../img/suo.png" />
+            </image>
+         </ImageView>
+         <Label layoutX="14.0" layoutY="2.0" prefHeight="45.0" prefWidth="190.0" stylesheets="@../../../../../super-market/src/main/resources/css/style.css" text="苍蓝星超市欢迎你">
+            <font>
+               <Font size="22.0" />
+            </font>
+         </Label>
+         <RadioButton layoutX="181.0" layoutY="85.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="111.0" selected="true" text="收银员" toggleGroup="$user">
+            <font>
+               <Font size="18.0" />
+            </font>
+             <toggleGroup>
+                 <ToggleGroup fx:id="user" />
+             </toggleGroup>
+         </RadioButton>
+         <RadioButton layoutX="342.0" layoutY="85.0" mnemonicParsing="false" text="管理员" toggleGroup="$user" userData="1">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </RadioButton>
+      <Button layoutX="272.0" layoutY="256.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="69.0" styleClass="blue-theme" stylesheets="@../css/style.css" text="登录" />
+   </children>
 </AnchorPane>
