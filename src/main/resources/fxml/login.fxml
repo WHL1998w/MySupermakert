@@ -43,7 +43,11 @@
                <Font size="22.0" />
             </font>
          </Label>
-         <RadioButton layoutX="181.0" layoutY="85.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="111.0" selected="true" text="收银员" toggleGroup="$user">
+         <RadioButton layoutX="181.0" layoutY="85.0"
+                      mnemonicParsing="false"
+                      prefHeight="20.0" prefWidth="111.0"
+                      selected="true" text="收银员"
+                      toggleGroup="$user">
             <font>
                <Font size="18.0" />
             </font>
@@ -51,11 +55,14 @@
                  <ToggleGroup fx:id="user" />
              </toggleGroup>
          </RadioButton>
-         <RadioButton layoutX="342.0" layoutY="85.0" mnemonicParsing="false" text="管理员" toggleGroup="$user" userData="1">
+         <RadioButton layoutX="342.0" layoutY="85.0"
+                      mnemonicParsing="false" text="管理员"
+                      toggleGroup="$user" userData="1">
             <font>
                <Font size="18.0" />
             </font>
          </RadioButton>
-      <Button layoutX="272.0" layoutY="256.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="69.0" styleClass="blue-theme" stylesheets="@../css/style.css" text="登录" />
+      <Button layoutX="272.0" layoutY="256.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="69.0"
+               onAction="#login" styleClass="blue-theme" stylesheets="@../css/style.css" text="登录" />
    </children>
 </AnchorPane>
